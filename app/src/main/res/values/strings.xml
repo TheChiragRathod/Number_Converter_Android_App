@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Number Convertor</string>
+    <string name="txtBin">BIN</string>
+    <string name="txtDec">DEC</string>
+    <string name="txtHex">HEC</string>
+    <string name="txtoct">OCT</string>
+</resources>

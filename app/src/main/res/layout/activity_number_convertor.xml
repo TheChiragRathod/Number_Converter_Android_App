@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_design"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".NumberConvertor">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Number Converter"
+        android:textColor="@android:color/white"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/edtDec"
+                style="@style/myEditTextStyle"
+                android:background="@drawable/focusview_design"
+                android:digits="0123456789"
+                android:drawableLeft="@drawable/decimal_leftsysmbol"
+                android:inputType="number"
+                android:maxLength="18" />
+
+            <EditText
+                android:id="@+id/edtBin"
+                style="@style/myEditTextStyle"
+                android:background="@drawable/viewdesign"
+                android:digits="01"
+                android:drawableLeft="@drawable/bin_leftsysmbol"
+                android:inputType="number"
+                android:maxLength="18" />
+
+            <EditText
+                android:id="@+id/edtOct"
+                style="@style/myEditTextStyle"
+                android:background="@drawable/viewdesign"
+                android:digits="01234567"
+                android:drawableLeft="@drawable/oct_leftsysmbol"
+                android:inputType="number"
+                android:maxLength="18" />
+
+            <EditText
+                android:id="@+id/edtHex"
+                style="@style/myEditTextStyle"
+                android:background="@drawable/viewdesign"
+                android:digits="0123456789ABCDEF"
+                android:drawableLeft="@drawable/hex_leftsysmbol"
+                android:maxLength="18" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_design"
+                android:text="Clear"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
+
