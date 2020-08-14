@@ -2,8 +2,6 @@
 
 
 
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -34,40 +32,115 @@
             android:orientation="vertical">
 
 
-            <EditText
-                android:id="@+id/edtDec"
-                style="@style/myEditTextStyle"
-                android:background="@drawable/focusview_design"
-                android:digits="0123456789"
-                android:drawableLeft="@drawable/decimal_leftsysmbol"
-                android:inputType="number"
-                android:maxLength="18" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtDec"
+                    style="@style/myEditTextStyle"
+                    android:background="@drawable/viewdesign"
+                    android:digits="0123456789"
+                    android:drawableLeft="@drawable/decimal_leftsysmbol"
+                    android:inputType="number"
+                    android:maxLength="18" />
 
-            <EditText
-                android:id="@+id/edtBin"
-                style="@style/myEditTextStyle"
-                android:background="@drawable/viewdesign"
-                android:digits="01"
-                android:drawableLeft="@drawable/bin_leftsysmbol"
-                android:inputType="number"
-                android:maxLength="18" />
 
-            <EditText
-                android:id="@+id/edtOct"
-                style="@style/myEditTextStyle"
-                android:background="@drawable/viewdesign"
-                android:digits="01234567"
-                android:drawableLeft="@drawable/oct_leftsysmbol"
-                android:inputType="number"
-                android:maxLength="18" />
+                <ImageView
+                    android:id="@+id/copyDecimal"
+                    android:layout_width="42dp"
+                    android:layout_height="35dp"
+                    android:layout_alignRight="@+id/edtDec"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="11dp"
+                   android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_copy" />
 
-            <EditText
-                android:id="@+id/edtHex"
-                style="@style/myEditTextStyle"
-                android:background="@drawable/viewdesign"
-                android:digits="0123456789ABCDEF"
-                android:drawableLeft="@drawable/hex_leftsysmbol"
-                android:maxLength="18" />
+            </RelativeLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtBin"
+                    style="@style/myEditTextStyle"
+                    android:background="@drawable/viewdesign"
+                    android:digits="01"
+                    android:drawableLeft="@drawable/bin_leftsysmbol"
+                    android:inputType="number"
+                    android:maxLength="18" />
+
+                <ImageView
+                    android:id="@+id/copyBin"
+                    android:layout_width="42dp"
+                    android:layout_height="35dp"
+                    android:layout_alignRight="@+id/edtBin"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_copy" />
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtOct"
+                    style="@style/myEditTextStyle"
+                    android:background="@drawable/viewdesign"
+                    android:digits="01234567"
+                    android:drawableLeft="@drawable/oct_leftsysmbol"
+                    android:inputType="number"
+                    android:maxLength="18" />
+
+                <ImageView
+                    android:id="@+id/copyOct"
+                    android:layout_width="42dp"
+                    android:layout_height="35dp"
+                    android:layout_alignRight="@+id/edtOct"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_copy" />
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtHex"
+                    style="@style/myEditTextStyle"
+                    android:background="@drawable/viewdesign"
+                    android:digits="0123456789ABCDEF"
+                    android:drawableLeft="@drawable/hex_leftsysmbol"
+                    android:maxLength="18" />
+
+                <ImageView
+                    android:id="@+id/copyHex"
+                    android:layout_width="42dp"
+                    android:layout_height="35dp"
+                    android:layout_alignRight="@+id/edtHex"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_copy" />
+
+            </RelativeLayout>
+
+
 
             <Button
                 android:id="@+id/btnClear"

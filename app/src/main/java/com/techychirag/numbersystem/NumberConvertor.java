@@ -5,6 +5,9 @@ import androidx.constraintlayout.solver.widgets.Rectangle;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -27,8 +30,11 @@ public class NumberConvertor extends AppCompatActivity
     private EditText editTextHexa;
     private Button buttonclear;
     private String value;
+    private String Empty="";
 
     private TextWatcher textWatcher;
+
+    private View.OnClickListener copyClickListener;
 
     private View.OnFocusChangeListener onFocusChangeListener;
     private int focusViewID;
@@ -78,11 +84,6 @@ public class NumberConvertor extends AppCompatActivity
      };
 
 
-
-
-
-
-
      onFocusChangeListener =new View.OnFocusChangeListener() {
          @Override
          public void onFocusChange(View view, boolean b) {
@@ -105,11 +106,11 @@ public class NumberConvertor extends AppCompatActivity
                 gradientDrawable.setCornerRadius(10);
 
                  if(focusViewID==R.id.edtDec){
-                     gradientDrawable.setStroke(8, ContextCompat.getColor(getApplicationContext(), android.R.color.holo_blue_light));
+                     gradientDrawable.setStroke(8, ContextCompat.getColor(getApplicationContext(), android.R.color.holo_blue_bright));
                  }
                  else
                  {
-                     gradientDrawable.setStroke(8, ContextCompat.getColor(getApplicationContext(), android.R.color.holo_green_light));
+                     gradientDrawable.setStroke(8, ContextCompat.getColor(getApplicationContext(), android.R.color.holo_blue_bright));
                  }
 
                  view.setBackground(gradientDrawable);
@@ -118,7 +119,7 @@ public class NumberConvertor extends AppCompatActivity
              {
                  ((EditText) findViewById(focusViewID)).removeTextChangedListener(textWatcher);
                  if(focusViewID==R.id.edtDec){
-                     view.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.focusview_design));
+                     view.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.viewdesign));
                  }
                  else
                  {
@@ -135,11 +136,62 @@ public class NumberConvertor extends AppCompatActivity
      editTextHexa.setOnFocusChangeListener(onFocusChangeListener);
 
 
+     copyClickListener = new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+
+             ClipboardManager clipboardManager= (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+             ClipData clipData=null;
+
+             switch (view.getId())
+             {
+                 case R.id.copyDecimal:
+
+                     clipData = ClipData.newPlainText("Copied Data",editTextDecimal.getText().toString());
+                     if(Empty.equals(editTextDecimal.getText().toString()))
+                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                     else
+                         Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
+
+                     break;
+
+                 case R.id.copyBin:
+                     clipData = ClipData.newPlainText("Copied Data",editTextBinary.getText().toString());
+                     if(Empty.equals(editTextBinary.getText().toString()))
+                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                     else
+                         Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
+                     break;
+
+                 case R.id.copyOct:
+                     clipData = ClipData.newPlainText("Copied Data",editTextOctal.getText().toString());
+                     if(Empty.equals(editTextOctal.getText().toString()))
+                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                     else
+                         Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
+                     break;
+
+                 case R.id.copyHex:
+                     clipData = ClipData.newPlainText("Copied Data",editTextHexa.getText().toString());
+                     if(Empty.equals(editTextHexa.getText().toString()))
+                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                     else
+                         Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
+                     break;
+             }
+
+             clipboardManager.setPrimaryClip(clipData);
+
+         }
+     };
+
+     findViewById(R.id.copyDecimal).setOnClickListener(copyClickListener);
+     findViewById(R.id.copyBin).setOnClickListener(copyClickListener);
+
+     findViewById(R.id.copyOct).setOnClickListener(copyClickListener);
+     findViewById(R.id.copyHex).setOnClickListener(copyClickListener);
+
     }
-
-
-
-
 
 
     private void clearFields()
@@ -166,7 +218,6 @@ public class NumberConvertor extends AppCompatActivity
                     editTextHexa.setText(String.valueOf(Long.toHexString(num)));
                     break;
 
-
                 case R.id.edtBin:
                     num =Long.parseLong(value,2);
                     editTextDecimal.setText(String.valueOf(num));
@@ -187,8 +238,6 @@ public class NumberConvertor extends AppCompatActivity
                     break;
 
             }
-
-
 
         }
         catch (NumberFormatException e)
