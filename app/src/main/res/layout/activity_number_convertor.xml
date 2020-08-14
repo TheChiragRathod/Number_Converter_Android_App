@@ -126,6 +126,7 @@
                     android:background="@drawable/viewdesign"
                     android:digits="0123456789ABCDEF"
                     android:drawableLeft="@drawable/hex_leftsysmbol"
+                    android:inputType="textCapCharacters"
                     android:maxLength="18" />
 
                 <ImageView

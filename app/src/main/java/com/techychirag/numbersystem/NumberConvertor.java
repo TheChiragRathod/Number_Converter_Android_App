@@ -149,7 +149,7 @@ public class NumberConvertor extends AppCompatActivity
 
                      clipData = ClipData.newPlainText("Copied Data",editTextDecimal.getText().toString());
                      if(Empty.equals(editTextDecimal.getText().toString()))
-                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                         Toast.makeText(NumberConvertor.this, "Please Enter Numbers!", Toast.LENGTH_SHORT).show();
                      else
                          Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
 
@@ -158,7 +158,7 @@ public class NumberConvertor extends AppCompatActivity
                  case R.id.copyBin:
                      clipData = ClipData.newPlainText("Copied Data",editTextBinary.getText().toString());
                      if(Empty.equals(editTextBinary.getText().toString()))
-                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                         Toast.makeText(NumberConvertor.this, "Please Enter Numbers!", Toast.LENGTH_SHORT).show();
                      else
                          Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
                      break;
@@ -166,7 +166,7 @@ public class NumberConvertor extends AppCompatActivity
                  case R.id.copyOct:
                      clipData = ClipData.newPlainText("Copied Data",editTextOctal.getText().toString());
                      if(Empty.equals(editTextOctal.getText().toString()))
-                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                         Toast.makeText(NumberConvertor.this, "Please Enter Numbers!", Toast.LENGTH_SHORT).show();
                      else
                          Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
                      break;
@@ -174,7 +174,7 @@ public class NumberConvertor extends AppCompatActivity
                  case R.id.copyHex:
                      clipData = ClipData.newPlainText("Copied Data",editTextHexa.getText().toString());
                      if(Empty.equals(editTextHexa.getText().toString()))
-                         Toast.makeText(NumberConvertor.this, "Please Enter Data!", Toast.LENGTH_SHORT).show();
+                         Toast.makeText(NumberConvertor.this, "Please Enter Numbers!", Toast.LENGTH_SHORT).show();
                      else
                          Toast.makeText(NumberConvertor.this, "Data Copied...", Toast.LENGTH_SHORT).show();
                      break;
@@ -215,20 +215,20 @@ public class NumberConvertor extends AppCompatActivity
                     num =Long.parseLong(value);
                     editTextBinary.setText(String.valueOf(Long.toBinaryString(num)));
                     editTextOctal.setText(String.valueOf(Long.toOctalString(num)));
-                    editTextHexa.setText(String.valueOf(Long.toHexString(num)));
+                    editTextHexa.setText(String.valueOf(Long.toHexString(num).toUpperCase()));
                     break;
 
                 case R.id.edtBin:
                     num =Long.parseLong(value,2);
                     editTextDecimal.setText(String.valueOf(num));
                     editTextOctal.setText(String.valueOf(Long.toOctalString(num)));
-                    editTextHexa.setText(String.valueOf(Long.toHexString(num)));
+                    editTextHexa.setText(String.valueOf(Long.toHexString(num).toUpperCase()));
                     break;
                 case R.id.edtOct:
                     num =Long.parseLong(value,8);
                     editTextDecimal.setText(String.valueOf(num));
                     editTextBinary.setText(String.valueOf(Long.toBinaryString(num)));
-                    editTextHexa.setText(String.valueOf(Long.toHexString(num)));
+                    editTextHexa.setText(String.valueOf(Long.toHexString(num).toUpperCase()));
                     break;
                 case R.id.edtHex:
                     num =Long.parseLong(value,16);
