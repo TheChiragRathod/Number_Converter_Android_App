@@ -4,4 +4,22 @@
     <string name="txtDec">DEC</string>
     <string name="txtHex">HEC</string>
     <string name="txtoct">OCT</string>
+
+
+
+    <string name="txtHeading">Number Converter</string>
+    <string name="txtButton">Clear</string>
+
+    <string name="copyDecimal">Copy the Decimal values</string>
+    <string name="copyBin">Copy the Binary values</string>
+    <string name="copyOct">Copy the Octal values</string>
+    <string name="copyHex">Copy the Hexadecimal values</string>
+
+
+    <string name="hint_Dec" ><font size="15" >Enter Decimal Numbers</font></string>
+    <string name="hint_Oct"><font size="15" >Enter Octal Numbers</font></string>
+    <string name="hint_Hex"><font size="15" >Enter Hexadecimal Numbers</font></string>
+    <string name="hint_bin"><font size="15" >Enter Binary Numbers</font></string>
+
+
 </resources>

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="Number Converter"
+        android:text="@string/txtHeading"
         android:textColor="#7B1FA2"
         android:textSize="36sp"
         android:textStyle="bold|italic"
