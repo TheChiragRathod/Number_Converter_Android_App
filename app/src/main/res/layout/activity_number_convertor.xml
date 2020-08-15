@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,10 +12,10 @@
     tools:context=".NumberConvertor">
 
 
-
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="75dp"
         android:gravity="center_horizontal"
         android:text="Number Converter"
         android:textColor="@android:color/white"
@@ -26,6 +25,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,6 +35,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <EditText
                     android:id="@+id/edtDec"
                     style="@style/myEditTextStyle"
@@ -51,20 +52,17 @@
                     android:layout_height="35dp"
                     android:layout_alignRight="@+id/edtDec"
                     android:layout_marginTop="27dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginRight="11dp"
-                   android:layout_marginEnd="5dp"
                     android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 
 
-
-
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <EditText
                     android:id="@+id/edtBin"
                     style="@style/myEditTextStyle"
@@ -80,18 +78,17 @@
                     android:layout_height="35dp"
                     android:layout_alignRight="@+id/edtBin"
                     android:layout_marginTop="27dp"
-                    android:layout_marginRight="11dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginRight="11dp"
                     android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 
 
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <EditText
                     android:id="@+id/edtOct"
                     style="@style/myEditTextStyle"
@@ -107,19 +104,17 @@
                     android:layout_height="35dp"
                     android:layout_alignRight="@+id/edtOct"
                     android:layout_marginTop="27dp"
-                    android:layout_marginRight="11dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginRight="11dp"
                     android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 
 
-
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <EditText
                     android:id="@+id/edtHex"
                     style="@style/myEditTextStyle"
@@ -135,12 +130,11 @@
                     android:layout_height="35dp"
                     android:layout_alignRight="@+id/edtHex"
                     android:layout_marginTop="27dp"
-                    android:layout_marginRight="11dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginRight="11dp"
                     android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
-
 
 
             <Button
@@ -156,9 +150,6 @@
 
         </LinearLayout>
     </ScrollView>
-
-
-
 
 
 </LinearLayout>
