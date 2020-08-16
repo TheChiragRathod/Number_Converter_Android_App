@@ -46,20 +46,20 @@
                     android:drawableLeft="@drawable/decimal_leftsysmbol"
                     android:hint="@string/hint_Dec"
                     android:inputType="number"
-                    android:maxLength="18" />
+                    android:paddingRight="42dp" />
 
 
                 <ImageView
                     android:id="@+id/copyDecimal"
                     android:layout_width="42dp"
                     android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/edtDec"
                     android:layout_alignRight="@+id/edtDec"
                     android:layout_marginTop="27dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="11dp"
                     android:contentDescription="@string/copyDecimal"
-                    android:src="@drawable/ic_copy"
-                    android:layout_alignEnd="@+id/edtDec" />
+                    android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 
@@ -78,19 +78,20 @@
                     android:hint="@string/hint_bin"
                     android:importantForAutofill="no"
                     android:inputType="number"
-                    android:maxLength="18" />
+                    android:paddingEnd="50dp"
+                    android:paddingRight="42dp" />
 
                 <ImageView
                     android:id="@+id/copyBin"
                     android:layout_width="42dp"
                     android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/edtBin"
                     android:layout_alignRight="@+id/edtBin"
                     android:layout_marginTop="27dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="11dp"
                     android:contentDescription="@string/copyBin"
-                    android:src="@drawable/ic_copy"
-                    android:layout_alignEnd="@+id/edtBin" />
+                    android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 
@@ -102,26 +103,26 @@
                 <EditText
                     android:id="@+id/edtOct"
                     style="@style/myEditTextStyle"
+                    android:autofillHints=""
                     android:background="@drawable/viewdesign"
                     android:digits="01234567"
+                    android:drawableStart="@drawable/oct_leftsysmbol"
                     android:drawableLeft="@drawable/oct_leftsysmbol"
                     android:hint="@string/hint_Oct"
                     android:inputType="number"
-                    android:maxLength="18"
-                    android:autofillHints=""
-                    android:drawableStart="@drawable/oct_leftsysmbol" />
+                    android:paddingRight="42dp" />
 
                 <ImageView
                     android:id="@+id/copyOct"
                     android:layout_width="42dp"
                     android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/edtOct"
                     android:layout_alignRight="@+id/edtOct"
                     android:layout_marginTop="27dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="11dp"
                     android:contentDescription="@string/copyOct"
-                    android:src="@drawable/ic_copy"
-                    android:layout_alignEnd="@+id/edtOct" />
+                    android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 
@@ -133,26 +134,26 @@
                 <EditText
                     android:id="@+id/edtHex"
                     style="@style/myEditTextStyle"
+                    android:autofillHints=""
                     android:background="@drawable/viewdesign"
                     android:digits="0123456789ABCDEF"
+                    android:drawableStart="@drawable/hex_leftsysmbol"
                     android:drawableLeft="@drawable/hex_leftsysmbol"
                     android:hint="@string/hint_Hex"
                     android:inputType="textCapCharacters"
-                    android:maxLength="18"
-                    android:autofillHints=""
-                    android:drawableStart="@drawable/hex_leftsysmbol" />
+                    android:paddingRight="42dp" />
 
                 <ImageView
                     android:id="@+id/copyHex"
                     android:layout_width="42dp"
                     android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/edtHex"
                     android:layout_alignRight="@+id/edtHex"
                     android:layout_marginTop="27dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="11dp"
                     android:contentDescription="@string/copyHex"
-                    android:src="@drawable/ic_copy"
-                    android:layout_alignEnd="@+id/edtHex" />
+                    android:src="@drawable/ic_copy" />
 
             </RelativeLayout>
 

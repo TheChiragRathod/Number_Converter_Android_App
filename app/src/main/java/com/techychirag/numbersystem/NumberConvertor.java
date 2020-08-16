@@ -205,7 +205,7 @@ public class NumberConvertor extends AppCompatActivity
     private void convertNumber()
     {
         try {
-            long num =0;
+            long  num =0;
 
 
 
